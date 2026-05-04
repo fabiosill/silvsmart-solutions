@@ -558,6 +558,353 @@ ul { list-style: none; }
 }
 
 /* ===========================
+   FUNCIONALIDADES (SERVICOS)
+=========================== */
+#servicos {
+  padding: 100px 0;
+  background: var(--gray-dark);
+}
+
+.func-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.func-grid-2 { margin-bottom: 0; }
+
+.func-card {
+  background: rgba(200,169,126,0.04);
+  border: 1px solid rgba(200,169,126,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.func-card:hover {
+  border-color: rgba(200,169,126,0.3);
+  transform: translateY(-4px);
+}
+
+.func-img-wrap { padding: 24px 24px 16px; }
+
+.func-img-bg {
+  background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid rgba(200,169,126,0.12);
+}
+
+.mock-bar { display: flex; gap: 5px; margin-bottom: 12px; }
+.mock-bar span { width: 8px; height: 8px; border-radius: 50%; background: rgba(200,169,126,0.25); }
+.mock-bar span:first-child { background: rgba(200,169,126,0.5); }
+
+.mock-content { padding: 0 4px; }
+
+.mock-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.mock-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mock-block {
+  height: 8px;
+  background: rgba(200,169,126,0.15);
+  border-radius: 2px;
+}
+
+.mock-block.w30 { width: 30%; }
+.mock-block.w40 { width: 40%; }
+.mock-block.w45 { width: 45%; }
+.mock-block.w50 { width: 50%; }
+.mock-block.w60 { width: 60%; }
+.mock-block.w70 { width: 70%; }
+.mock-block.w80 { width: 80%; }
+
+.mock-val {
+  font-size: 10px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.mock-bars {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  height: 50px;
+  margin-top: 12px;
+}
+
+.mb {
+  flex: 1;
+  background: rgba(200,169,126,0.15);
+  border-radius: 2px 2px 0 0;
+}
+
+.mb.active { background: var(--gold); }
+
+.mock-progress {
+  height: 8px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.mock-progress.before {
+  width: 45%;
+  background: rgba(200,169,126,0.2);
+}
+
+.mock-progress.after {
+  width: 75%;
+  background: var(--gold);
+}
+
+.mock-tag {
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(200,169,126,0.1);
+  display: inline-block;
+  padding: 4px 10px;
+}
+
+.team-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.team-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(200,169,126,0.25);
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.chat-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-bubble {
+  font-size: 10px;
+  padding: 7px 11px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.chat-bubble.left {
+  background: rgba(200,169,126,0.12);
+  align-self: flex-start;
+}
+
+.chat-bubble.right {
+  background: rgba(200,169,126,0.3);
+  align-self: flex-end;
+}
+
+.func-info {
+  padding: 16px 24px 24px;
+}
+
+.func-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.func-info p {
+  font-size: 13px;
+  color: var(--gray-mid);
+  font-weight: 300;
+}
+
+/* ===========================
+   DEPOIMENTOS
+=========================== */
+#depoimentos {
+  padding: 100px 0;
+  background: var(--black);
+}
+
+.depo-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.depo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.depo-card {
+  background: rgba(200,169,126,0.04);
+  border: 1px solid rgba(200,169,126,0.12);
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.depo-stars {
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.depo-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 24px;
+}
+
+.depo-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.depo-avatar {
+  width: 44px;
+  height: 44px;
+  background: rgba(200,169,126,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.depo-author span {
+  font-size: 11px;
+  color: var(--gold);
+}
+
+/* ===========================
+   PORQUE
+=========================== */
+#porque {
+  background: var(--gray-dark);
+  padding: 80px 0;
+}
+
+.porque-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  text-align: center;
+}
+
+.porque-icon {
+  width: 72px;
+  height: 72px;
+  background: rgba(200,169,126,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.porque-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.porque-item p {
+  font-size: 13px;
+  color: var(--gray-mid);
+}
+
+/* ===========================
+   SUPORTE
+=========================== */
+#suporte {
+  padding: 100px 0;
+  background: var(--black);
+}
+
+.suporte-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.suporte-img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.suporte-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.suporte-feat {
+  display: flex;
+  gap: 14px;
+}
+
+.suporte-feat-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(200,169,126,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suporte-feat h4 {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.suporte-feat p {
+  font-size: 12px;
+  color: var(--gray-mid);
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 900px) {
+  .func-grid,
+  .depo-grid,
+  .porque-grid,
+  .suporte-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
    SOBRE NÓS
 =========================== */
 #sobre {

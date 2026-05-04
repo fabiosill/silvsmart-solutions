@@ -210,3 +210,74 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* ===========================
+   SILVSMART SOLUTIONS
+   main.js — Pure JavaScript
+=========================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ─── NAVBAR SCROLL ─── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  /* ─── HAMBURGER MENU ─── */
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ─── SCROLL REVEAL ─── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ─── BACK TO TOP ─── */
+  const backTop = document.getElementById('back-top');
+
+  window.addEventListener('scroll', () => {
+    backTop?.classList.toggle('show', window.scrollY > 500);
+  });
+
+  backTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ─── SMOOTH SCROLL ─── */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+});

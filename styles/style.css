@@ -910,10 +910,20 @@ ul { list-style: none; }
    RESPONSIVO
 =========================== */
 @media (max-width: 900px) {
+  /* func-grid e depo-grid ficam em 2 colunas no mobile */
   .func-grid,
-  .depo-grid,
+  .depo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .porque-grid,
   .suporte-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Telas muito pequenas: colapsa para 1 coluna */
+@media (max-width: 420px) {
+  .func-grid,
+  .depo-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1970,16 +1980,6 @@ footer {
   .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
   .sobre-visual { max-width: 480px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-}
-
-/* Tablet intermediário: func e depo em 2 colunas */
-@media (max-width: 860px) {
-  .func-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .depo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 900px) {

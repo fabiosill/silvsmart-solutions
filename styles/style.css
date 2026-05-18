@@ -2223,12 +2223,12 @@ footer {
 
   /* 768px herda o grid de 1024px (text/logo/ctas empilhados) */
   .hero-logo-visual {
-    width: 300px;
-    margin: 30px auto;
+    width: 140px;
+    margin: 20px auto;
   }
 
   .hero-logo-img {
-    max-width: 80vw;
+    max-width: 140px;
   }
 
   .hero-content {
@@ -2254,14 +2254,14 @@ footer {
   .btn-secondary {
     width: 100%;
     justify-content: center;
-    padding: 14px 24px;
+    padding: 10px 16px;
   }
   .hero-scroll { display: none; }
 
   /* Hero stats: 3 cols → 1 col empilhado */
   .hero-stats-inner {
     grid-template-columns: 1fr;
-    padding: 0;
+    padding: -5;
   }
   .hero-stat {
     padding: 6px 14px;

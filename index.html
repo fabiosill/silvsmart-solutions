@@ -63,33 +63,58 @@
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
   <div class="hero-pattern"></div>
 
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        <span>Consultoria para Salões</span>
+    <div class="hero-inner">
+
+      <!-- ÁREA "text": badge + título + subtítulo -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>Consultoria para Salões</span>
+        </div>
+
+        <h1 class="hero-title">
+          Tecnologia a seu favor<br>
+          <em>Transforme agilidade em lucro</em>
+        </h1>
+
+        <p class="hero-subtitle">
+          <!-- seu subtítulo aqui -->
+        </p>
+
+        <!-- ⚠️  NÃO coloque .hero-ctas aqui! Veja abaixo. -->
+      </div><!-- /.hero-content -->
+
+      <!-- ÁREA "logo": imagem animada (desktop=direita / <1024px=centro) -->
+      <div class="hero-logo-visual">
+        <div class="hero-logo-ring"></div>
+        <img
+          src="assets/logo.png"
+          alt="SilvSmart Solutions"
+          class="hero-logo-img"
+          loading="eager"
+          decoding="async"
+        >
       </div>
 
-      <h1 class="hero-title">
-        Tecnologia a seu favor
-        <br><em>Transforme agilidade em lucro</em>
-      </h1>
-
-      <p class="hero-subtitle">
-      </p>
-
+      <!-- ÁREA "ctas": filho direto do hero-inner (fora do hero-content) -->
       <div class="hero-ctas">
         <a href="#contato" class="btn-primary">
-         Transformar Meu Salão
+          Transformar meu salão
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </a>
         <a href="#planos" class="btn-secondary">
-          Conhecer os Planos
+          Conhecer os planos
         </a>
       </div>
-    </div>
-  </div>
+
+    </div><!-- /.hero-inner -->
+  </div><!-- /.container -->
 
   <div class="hero-stats">
     <div class="container">
